@@ -21,7 +21,7 @@ setInterval(()=>{
 },100)
 
 window.makeFlake = function() {
-  let href = `http://${location.host}/?`
+  let href = location.href.split('?')[0] + '?'
   for(let i in arguments){
     href = href + (i < arguments.length - 1 ? arguments[i] + '&': arguments[i]  )
   }

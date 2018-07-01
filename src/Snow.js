@@ -60,7 +60,8 @@ export default class Snow {
     }, this.durationTime)
   }
   destroy() {
-    this.stage.removeChild(this.snow)
+    if (this.snow)
+      this.stage.removeChild(this.snow)
     this.snow = null
   }
   getRandom(rangeArray, toFixed) {
